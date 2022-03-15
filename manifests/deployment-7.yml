@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "kubernates-17b4"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "kubernates-17b4"
+  template:
+    metadata:
+      labels:
+        app: "kubernates-17b4"
+    spec:
+      containers:
+        - name: "kubernates-17b4"
+          image: "dwefdwe.azurecr.io/kubernates"
+          ports:
+          - containerPort: 80
